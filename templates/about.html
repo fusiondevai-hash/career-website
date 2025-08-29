@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Career Opportunities{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>About Our Company</h1>
+        
+        <div class="about-content mt-4">
+            <h3>Our Mission</h3>
+            <p class="lead">We are dedicated to creating innovative solutions that make a positive impact on people's lives. Our team is passionate about technology, collaboration, and continuous learning.</p>
+            
+            <h3>Why Work With Us?</h3>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <h5>🚀 Innovation</h5>
+                        <p>Work on cutting-edge projects that push the boundaries of technology.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <h5>🤝 Collaboration</h5>
+                        <p>Join a supportive team that values diverse perspectives and ideas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <h5>📈 Growth</h5>
+                        <p>Continuous learning opportunities and career advancement paths.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-box">
+                        <h5>⚖️ Work-Life Balance</h5>
+                        <p>Flexible working arrangements and comprehensive benefits.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5">
+                <h3>Ready to Join Us?</h3>
+                <p>Explore our open positions and find the perfect role for your skills and interests.</p>
+                <a href="{{ url_for('home') }}" class="btn btn-primary btn-lg">View Open Positions</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
