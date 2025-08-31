@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jovian Careers</title>
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Title -->
+    <h1>Jovian Careers</h1>
+
+    <!-- Cover Photo -->
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop" 
+         alt="Cover" class="cover" />
+
+    <!-- About Jovian -->
+    <h2>About Jovian</h2>
+    <p>Jovian is a learning-first company that helps people grow their careers with real projects and mentorship.</p>
+    <p>We focus on building impactful products and cultivating a culture of curiosity and collaboration.</p>
+    <p>If you're eager to solve meaningful problems, Jovian is the right place for you.</p>
+
+    <!-- Job Openings -->
+    <h2>Job Openings</h2>
+    <div class="jobs">
+      {% for job in jobs %}
+      <div class="job">
+        <div>
+          <span class="job-title">{{ job.title }}</span>
+          <div class="location">{{ job.location }}</div>
+        </div>
+        <a href="{{ url_for('job_detail', job_id=job['id']) }}" class="btn">Apply</a>
+
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Contact Us -->
+    <div class="cta">
+      <button class="btn">Contact Us</button>
+    </div>
+  </div>
+</body>
+</html>

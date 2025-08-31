@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Submitted</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>✅ Application Submitted Successfully</h1>
+    <p>Thank you, {{ name }}! We have received your application for the role of <strong>{{ job.title }}</strong>.</p>
+
+    <div style="margin-top:20px;">
+      <a href="{{ url_for('home') }}" class="btn">Back to Careers</a>
+    </div>
+  </div>
+</body>
+</html>
