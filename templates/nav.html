@@ -1,0 +1,49 @@
+<!-- templates/nav.html -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="{{ url_for('home') }}" class="nav-logo">Jovian Careers</a>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="#about">About Jovian</a></li>
+      <li><a href="#jobs">Job Openings</a></li>
+      <li><a href="mailto:jcareers@gmail.com?subject=Job%20Application&body=Hey%20[Name],%0A%0ABody%0A">Contact</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background: #2563eb;
+    padding: 12px 20px;
+    color: white;
+  }
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px; /* spacing between logo and links */
+  }
+  .nav-logo {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+  }
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+</style>
