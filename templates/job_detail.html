@@ -97,22 +97,22 @@
     <!-- Responsibilities -->
     <h3>Responsibilities</h3>
     <ul>
-      {% for item in job.responsibilities %}
-      <li>{{ item }}</li>
-      {% endfor %}
+        {% for item in job.responsibilities.split(',') %}
+            <li>{{ item.strip() }}</li>
+        {% endfor %}
     </ul>
 
     <!-- Requirements -->
     <h3>Requirements</h3>
     <ul>
-      {% for item in job.requirements %}
-      <li>{{ item }}</li>
-      {% endfor %}
+        {% for item in job.requirements.split(',') %}
+            <li>{{ item.strip() }}</li>
+        {% endfor %}
     </ul>
 
     <!-- Salary -->
     <h3>Salary</h3>
-    <p>{{ job.salary }}</p>
+    <p>{{ job.salary }}{{job.currency}}</p>
 
     <!-- Application Form -->
     <h2>Application Form</h2>
